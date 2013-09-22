@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Timer.js : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Timer.js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/HondaDai/Timer.js">View on GitHub</a>
+
+          <h1 id="project_title">Timer.js</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/HondaDai/Timer.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/HondaDai/Timer.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a name="timeronce" class="anchor" href="#timeronce"><span class="octicon octicon-link"></span></a>Timer.once</h3>
+
+<pre><code>Timer.once([name,] callback, interval)
+</code></pre>
+
+<p>Execute <em>callback</em> once after <em>interval</em> millisecond.</p>
+
+<ul>
+<li>if name has not been given, name = (a unique id)<br>
+</li>
+<li>return a <a href="#timer-object">timer object</a>
+</li>
+</ul><h3>
+<a name="timerrepeat" class="anchor" href="#timerrepeat"><span class="octicon octicon-link"></span></a>Timer.repeat</h3>
+
+<pre><code>Timer.repeat([name,] callback, interval, [repeat_times]);
+</code></pre>
+
+<p>Execute <em>callback</em> <em>repeat_times</em> times every <em>interval</em> millisecond.</p>
+
+<ul>
+<li>if name has not been given, name = (a unique id)<br>
+</li>
+<li>if repeat_times has not been given, repeat_time = Infinity</li>
+<li>return a <a href="#timer-object">timer object</a>
+</li>
+</ul><h3>
+<a name="timerstop" class="anchor" href="#timerstop"><span class="octicon octicon-link"></span></a>Timer.stop</h3>
+
+<pre><code>Timer.stop(name)
+</code></pre>
+
+<h2>
+<a name="tools" class="anchor" href="#tools"><span class="octicon octicon-link"></span></a>Tools</h2>
+
+<h3>
+<a name="timerstopall" class="anchor" href="#timerstopall"><span class="octicon octicon-link"></span></a>Timer.stopAll</h3>
+
+<pre><code>Timer.stopAll()
+</code></pre>
+
+<p>Stop all timer.</p>
+
+<h3>
+<a name="timerisrunning" class="anchor" href="#timerisrunning"><span class="octicon octicon-link"></span></a>Timer.isRunning</h3>
+
+<pre><code>Timer.isRunning(name)
+</code></pre>
+
+<p>Check timer's running status.</p>
+
+<h2>
+<a name="sample" class="anchor" href="#sample"><span class="octicon octicon-link"></span></a>Sample</h2>
+
+<pre><code>var timer1 = Timer.repeat('timer1', function(){
+  console.log(this); // {name: 'timer1', repeat_times: ... ,stop: function(){ ...} } 
+  console.log(new Date());
+}, 1000);
+
+console.log(timer1); // {name: 'timer1', repeat_times: ... ,stop: function(){ ...} } 
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Timer.js maintained by <a href="https://github.com/HondaDai">HondaDai</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
